@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import { program } from "commander";
 import chalk from "chalk";
 import { translate } from "./src/translator";
