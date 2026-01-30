@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { flatten, unflatten } from "./parser";
+import { flatten, unflatten, groupBySection } from "./parser";
 
 describe("flatten", () => {
   test("flattens nested object to dot notation", () => {
@@ -75,5 +75,43 @@ describe("unflatten", () => {
 
     const result = unflatten(flatten(original));
     expect(result).toEqual(original);
+  });
+});
+
+describe("groupBySection", () => {
+  test("groups flattened keys by top-level section", () => {
+    const input = {
+      "auth.login.title": "Entrar",
+      "auth.logout.button": "Sair",
+      "nav.home": "Home",
+      "nav.settings": "Config",
+    };
+
+    const result = groupBySection(input);
+
+    expect(result).toEqual({
+      auth: {
+        "login.title": "Entrar",
+        "logout.button": "Sair",
+      },
+      nav: {
+        home: "Home",
+        settings: "Config",
+      },
+    });
+  });
+
+  test("handles single-level keys as their own section", () => {
+    const input = {
+      title: "Hello",
+      "auth.login": "Login",
+    };
+
+    const result = groupBySection(input);
+
+    expect(result).toEqual({
+      title: { "": "Hello" },
+      auth: { login: "Login" },
+    });
   });
 });

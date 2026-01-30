@@ -1,4 +1,4 @@
-import type { FlattenedStrings } from "./types";
+import type { FlattenedStrings, GroupedStrings } from "./types";
 
 export function flatten(
   obj: Record<string, unknown>,
@@ -35,6 +35,32 @@ export function unflatten(flat: FlattenedStrings): Record<string, unknown> {
     }
 
     current[parts[parts.length - 1]!] = value;
+  }
+
+  return result;
+}
+
+export function groupBySection(flat: FlattenedStrings): GroupedStrings {
+  const result: GroupedStrings = {};
+
+  for (const [key, value] of Object.entries(flat)) {
+    const dotIndex = key.indexOf(".");
+    let section: string;
+    let remainder: string;
+
+    if (dotIndex === -1) {
+      section = key;
+      remainder = "";
+    } else {
+      section = key.slice(0, dotIndex);
+      remainder = key.slice(dotIndex + 1);
+    }
+
+    if (!result[section]) {
+      result[section] = {};
+    }
+
+    result[section]![remainder] = value;
   }
 
   return result;
