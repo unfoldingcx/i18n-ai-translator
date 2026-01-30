@@ -18,3 +18,24 @@ export function flatten(
 
   return result;
 }
+
+export function unflatten(flat: FlattenedStrings): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+
+  for (const [key, value] of Object.entries(flat)) {
+    const parts = key.split(".");
+    let current = result;
+
+    for (let i = 0; i < parts.length - 1; i++) {
+      const part = parts[i]!;
+      if (!(part in current)) {
+        current[part] = {};
+      }
+      current = current[part] as Record<string, unknown>;
+    }
+
+    current[parts[parts.length - 1]!] = value;
+  }
+
+  return result;
+}
