@@ -1,5 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { flatten, unflatten, groupBySection } from "./parser";
+import { flatten, unflatten, groupBySection, ungroupFromSections } from "./parser";
 
 describe("flatten", () => {
   test("flattens nested object to dot notation", () => {
@@ -113,5 +113,49 @@ describe("groupBySection", () => {
       title: { "": "Hello" },
       auth: { login: "Login" },
     });
+  });
+});
+
+describe("ungroupFromSections", () => {
+  test("ungroups sections back to flat structure", () => {
+    const input = {
+      auth: {
+        "login.title": "Entrar",
+        "logout.button": "Sair",
+      },
+      nav: {
+        home: "Home",
+      },
+    };
+
+    const result = ungroupFromSections(input);
+
+    expect(result).toEqual({
+      "auth.login.title": "Entrar",
+      "auth.logout.button": "Sair",
+      "nav.home": "Home",
+    });
+  });
+
+  test("handles empty remainder keys", () => {
+    const input = {
+      title: { "": "Hello" },
+    };
+
+    const result = ungroupFromSections(input);
+
+    expect(result).toEqual({
+      title: "Hello",
+    });
+  });
+
+  test("roundtrip: groupBySection then ungroupFromSections returns original", () => {
+    const original = {
+      "auth.login.title": "Entrar",
+      "nav.home": "Home",
+    };
+
+    const result = ungroupFromSections(groupBySection(original));
+    expect(result).toEqual(original);
   });
 });

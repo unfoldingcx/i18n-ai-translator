@@ -65,3 +65,16 @@ export function groupBySection(flat: FlattenedStrings): GroupedStrings {
 
   return result;
 }
+
+export function ungroupFromSections(grouped: GroupedStrings): FlattenedStrings {
+  const result: FlattenedStrings = {};
+
+  for (const [section, strings] of Object.entries(grouped)) {
+    for (const [remainder, value] of Object.entries(strings)) {
+      const key = remainder === "" ? section : `${section}.${remainder}`;
+      result[key] = value;
+    }
+  }
+
+  return result;
+}
