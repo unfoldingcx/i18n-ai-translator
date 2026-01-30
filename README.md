@@ -1,4 +1,4 @@
-# i18n-ai-translator
+# I18N Batch Translator (AI)
 
 A CLI tool that translates i18n JSON files using OpenAI API with smart section-based batching for context-aware translations.
 
@@ -16,13 +16,13 @@ A CLI tool that translates i18n JSON files using OpenAI API with smart section-b
 ### Using Bun (recommended)
 
 ```bash
-bun install -g i18n-ai-translator
+bun install -g i18n-batch-translator
 ```
 
 ### Using npm
 
 ```bash
-npm install -g i18n-ai-translator
+npm install -g i18n-batch-translator
 ```
 
 ## Configuration
@@ -53,7 +53,7 @@ OPENAI_ORG_ID=your-org-id-here
 Translate a Portuguese (pt-BR) file to English and Spanish:
 
 ```bash
-i18n-ai-translator translate \
+i18n-batch-translator translate \
   --input ./locales/pt-BR.json \
   --from pt-BR \
   --to en-US,es-AR \
@@ -67,7 +67,7 @@ This creates `./locales/en-US.json` and `./locales/es-AR.json`.
 Preview what will be translated without making API calls:
 
 ```bash
-i18n-ai-translator translate \
+i18n-batch-translator translate \
   --input ./locales/pt-BR.json \
   --from pt-BR \
   --to en-US,es-AR,fr-FR \
@@ -101,7 +101,7 @@ Would create files in: ./locales/
 Use GPT-4o-mini for faster, cheaper translations:
 
 ```bash
-i18n-ai-translator translate \
+i18n-batch-translator translate \
   --input ./locales/pt-BR.json \
   --from pt-BR \
   --to en-US \
@@ -114,7 +114,7 @@ i18n-ai-translator translate \
 See detailed progress for each section:
 
 ```bash
-i18n-ai-translator translate \
+i18n-batch-translator translate \
   --input ./locales/pt-BR.json \
   --from pt-BR \
   --to en-US \
@@ -125,7 +125,7 @@ i18n-ai-translator translate \
 ## CLI Options
 
 ```
-Usage: i18n-ai-translator translate [options]
+Usage: i18n-batch-translator translate [options]
 
 Translate an i18n JSON file to one or more languages
 
@@ -199,6 +199,7 @@ It also validates that all placeholders in the source are present in the transla
 Output files maintain the exact same structure as the input:
 
 **Input (`pt-BR.json`):**
+
 ```json
 {
   "auth": {
@@ -211,6 +212,7 @@ Output files maintain the exact same structure as the input:
 ```
 
 **Output (`en-US.json`):**
+
 ```json
 {
   "auth": {
@@ -249,8 +251,8 @@ Got: title, btn
 ### Setup
 
 ```bash
-git clone https://github.com/yourusername/i18n-ai-translator.git
-cd i18n-ai-translator
+git clone https://github.com/yourusername/i18n-batch-translator.git
+cd i18n-batch-translator
 bun install
 ```
 

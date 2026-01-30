@@ -1,5 +1,5 @@
 {
-  "name": "i18n-ai-translator",
+  "name": "i18n-batch-translator",
   "version": "1.0.0",
   "description": "CLI tool to translate i18n JSON files using OpenAI API with smart section-based batching",
   "author": "Your Name",
