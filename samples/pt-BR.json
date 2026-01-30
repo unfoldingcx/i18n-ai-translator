@@ -1,0 +1,486 @@
+{
+  "app": {
+    "name": "FCR - Ferramenta de Coletas",
+    "description": "Ferramenta de Coletas e Resultados da Timac Agro"
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar",
+      "subtitle": "Acesse sua conta para continuar",
+      "button": "Entrar com sua conta",
+      "loading": "Autenticando...",
+      "error": "Erro ao autenticar. Tente novamente."
+    },
+    "logout": {
+      "button": "Sair",
+      "confirm_title": "Sair da Conta",
+      "confirm_message": "Tem certeza que deseja sair desta conta?",
+      "confirm": "Sair",
+      "cancel": "Cancelar"
+    }
+  },
+  "navigation": {
+    "home": "Início",
+    "collections": "Coletas",
+    "fields": "Talhões",
+    "harvests": "Safras",
+    "maps": "Mapas",
+    "settings": "Configurações",
+    "new_collection": "Nova Coleta"
+  },
+  "menu": {
+    "home": "Início",
+    "maps": "Mapas",
+    "access_map": "Acessar o Mapa",
+    "field_management": "Gerenciamento de Talhões",
+    "harvests": "Safras",
+    "open_harvest": "Abertura de Safra",
+    "close_harvest": "Fechamento de Safra",
+    "harvest_history": "Histórico de Safras",
+    "dark_mode": "Modo Escuro",
+    "light_mode": "Modo Claro",
+    "settings": "Configurações",
+    "logout": "Sair desta conta"
+  },
+  "home": {
+    "welcome": "Olá, {{name}}",
+    "subtitle": "Utilizando FCR Web",
+    "recent_collections": "Coletas Recentes",
+    "view_all": "Ver todas",
+    "no_collections": "Nenhuma coleta encontrada",
+    "create_first": "Criar minha primeira coleta",
+    "stats": {
+      "total_collections": "Total de Coletas",
+      "pending_sync": "Pendentes",
+      "this_month": "Este Mês",
+      "approved": "Aprovadas"
+    }
+  },
+  "collections": {
+    "title": "Coletas",
+    "subtitle": "{{count}} coletas registradas",
+    "subtitle_zero": "Nenhuma coleta registrada",
+    "new": "Nova Coleta",
+    "new_collection": "Nova Coleta",
+    "edit": "Editar Coleta",
+    "view": "Coleta",
+    "view_details": "Ver detalhes",
+    "details": "Detalhes da Coleta",
+    "generate_report": "Gerar Relatório",
+    "copy_from": "Criar Nova Baseada Nesta",
+    "view_client_collections": "Ver Coletas do Cliente",
+    "contract_status": "Status do Contrato de Imagem",
+    "not_found": "Coleta não encontrada",
+    "not_found_description": "A coleta que você está procurando não existe ou foi removida.",
+    "inherited": {
+      "title": "Coleta Herdada",
+      "description": "Esta coleta foi herdada de outro consultor.",
+      "from": "De: {{name}}"
+    },
+    "search_placeholder": "Buscar por cliente, propriedade ou cultura...",
+    "filter_culture": "Filtrar por cultura",
+    "all_cultures": "Todas as culturas",
+    "showing": "Exibindo {{count}} de {{total}} coletas",
+    "empty_title": "Nenhuma coleta encontrada",
+    "empty_description": "Comece criando sua primeira coleta para visualizar os dados aqui.",
+    "create_first": "Criar minha primeira coleta",
+    "no_results": "Nenhum resultado encontrado",
+    "no_results_hint": "Tente ajustar os filtros ou termo de busca.",
+    "stats": {
+      "total": "Total",
+      "approved": "Aprovadas",
+      "pending": "Pendentes",
+      "drafts": "Rascunhos"
+    },
+    "sort": {
+      "recent": "Mais recentes",
+      "oldest": "Mais antigas",
+      "client": "Por cliente",
+      "culture": "Por cultura"
+    },
+    "filters": {
+      "all": "Todas",
+      "pending": "Pendentes",
+      "approved": "Aprovadas",
+      "last_week": "Última semana",
+      "last_month": "Último mês"
+    },
+    "card": {
+      "client": "Cliente",
+      "culture": "Cultura",
+      "phase": "Fase",
+      "date": "Data",
+      "pending": "Pendente",
+      "approved": "Aprovado",
+      "inherited": "Herdada"
+    },
+    "form": {
+      "client": "Cliente",
+      "field": "Talhão",
+      "culture": "Cultura",
+      "phase": "Fase",
+      "zone": "Zona TIMAC",
+      "program": "Programa",
+      "visit_goal": "Objetivo da Visita",
+      "problematic": "Necessidades Identificadas",
+      "production_segment": "Segmento de Produção",
+      "select_placeholder": "Selecione...",
+      "required_fields": "Campos obrigatórios (*)",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "finish": "Finalizar"
+    },
+    "stages": {
+      "start": "Início",
+      "data": "Dados da Coleta",
+      "conclusion": "Conclusão"
+    },
+    "reports": {
+      "title": "Gerar Relatório",
+      "select_content": "Selecione o conteúdo do relatório",
+      "select_all": "Selecionar Todos",
+      "generate_pdf": "Gerar PDF",
+      "generate_png": "Gerar PNG",
+      "generating": "Gerando relatório...",
+      "success": "Relatório gerado com sucesso!",
+      "error": "Erro ao gerar relatório"
+    },
+    "success": {
+      "created": "Coleta criada com sucesso!",
+      "updated": "Coleta atualizada com sucesso!"
+    },
+    "error": {
+      "create": "Erro ao criar coleta",
+      "update": "Erro ao atualizar coleta",
+      "load": "Erro ao carregar coletas"
+    }
+  },
+  "fields": {
+    "title": "Gerenciamento de Talhões",
+    "subtitle": "Visualize e gerencie seus talhões customizados e georeferenciados",
+    "details": "Detalhes do Talhão",
+    "new": "Novo Talhão",
+    "edit": "Editar Talhão",
+    "register": "Registrar Talhão",
+    "register_varda": "Registrar Talhão Georeferenciado",
+    "create_custom": "Criar Talhão Customizado",
+    "custom": "Customizados",
+    "georeferenced": "Georeferenciados",
+    "all": "Todos os Talhões",
+    "all_clients": "Todos os clientes",
+    "owner": "Proprietário",
+    "identifier": "Identificador",
+    "varda_id": "ID Varda",
+    "total_area": "Área Total",
+    "perimeter": "Perímetro",
+    "coordinates": "Coordenadas",
+    "view_map": "Ver no Mapa",
+    "search_placeholder": "Buscar por nome do talhão...",
+    "not_found": "Talhão não encontrado",
+    "not_found_description": "O talhão que você está procurando não existe ou foi removido.",
+    "no_data": "Nenhum talhão encontrado",
+    "no_results": "Tente ajustar os filtros de busca.",
+    "empty_state": "Comece criando seu primeiro talhão customizado.",
+    "showing_results": "Mostrando {{count}} de {{total}} talhões",
+    "type": {
+      "custom": "Talhão Customizado",
+      "georeferenced": "Talhão Georeferenciado"
+    },
+    "info": {
+      "client": "Cliente",
+      "property": "Propriedade",
+      "zone": "Zona TIMAC",
+      "altitude": "Altitude",
+      "area": "Área",
+      "perimeter": "Perímetro",
+      "coordinates": "Coordenadas",
+      "current_harvest": "Safra Atual",
+      "created_at": "Criado em",
+      "updated_at": "Atualizado em"
+    },
+    "actions": {
+      "edit": "Editar Talhão",
+      "delete": "Excluir Talhão",
+      "view_map": "Ver no Mapa",
+      "open_harvest": "Abrir Safra",
+      "create_collection": "Nova Coleta",
+      "view_harvests": "Ver Safras",
+      "view_collections": "Ver Coletas"
+    },
+    "form": {
+      "name": "Nome do Talhão",
+      "name_placeholder": "Digite o nome do talhão",
+      "property": "Propriedade",
+      "property_placeholder": "Nome da propriedade/fazenda",
+      "client": "Cliente",
+      "client_placeholder": "Selecione o cliente",
+      "zone": "Zona TIMAC",
+      "zone_placeholder": "Selecione a zona",
+      "altitude": "Altitude",
+      "altitude_placeholder": "Selecione a faixa de altitude",
+      "altitude_metric": "Unidade",
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "creating": "Criando talhão...",
+      "updating": "Atualizando talhão..."
+    },
+    "drawing": {
+      "title": "Desenhar Talhão",
+      "instructions": "Clique no mapa para adicionar pontos e desenhar o polígono do talhão.",
+      "min_points": "Mínimo de 3 pontos necessários",
+      "undo": "Desfazer",
+      "finish": "Finalizar Desenho",
+      "cancel": "Cancelar Desenho",
+      "clear": "Limpar Pontos"
+    },
+    "register_modal": {
+      "title": "Registrar Talhão",
+      "description": "Preencha os dados abaixo para registrar este talhão georeferenciado.",
+      "varda_info": "Informações do Varda",
+      "varda_id": "ID Varda",
+      "area": "Área",
+      "perimeter": "Perímetro"
+    },
+    "success": {
+      "created": "Talhão criado com sucesso!",
+      "registered": "Talhão registrado com sucesso!",
+      "updated": "Talhão atualizado com sucesso!",
+      "deleted": "Talhão excluído com sucesso!"
+    },
+    "error": {
+      "create": "Erro ao criar talhão",
+      "register": "Erro ao registrar talhão",
+      "update": "Erro ao atualizar talhão",
+      "delete": "Erro ao excluir talhão",
+      "load": "Erro ao carregar talhões",
+      "required_client": "Selecione um cliente",
+      "required_name": "Digite o nome do talhão",
+      "required_property": "Digite a propriedade",
+      "required_zone": "Selecione a zona",
+      "required_altitude": "Selecione a altitude",
+      "min_points": "Desenhe pelo menos 3 pontos para criar o polígono"
+    },
+    "confirm_delete": {
+      "title": "Excluir Talhão",
+      "message": "Tem certeza que deseja excluir este talhão? Esta ação não pode ser desfeita.",
+      "confirm": "Excluir",
+      "cancel": "Cancelar"
+    },
+    "redirect_to_map": {
+      "title": "Criar Talhão",
+      "description": "Para criar um novo talhão, você precisa acessar o mapa. Lá você poderá:",
+      "option_1": "Selecionar um talhão georeferenciado existente e registrá-lo",
+      "option_2": "Desenhar manualmente um talhão customizado",
+      "go_to_map": "Ir para o Mapa"
+    }
+  },
+  "harvests": {
+    "title": "Gerenciamento de Safras",
+    "subtitle": "Visualize e gerencie suas safras abertas e fechadas",
+    "new": "Nova Safra",
+    "open": "Abrir Safra",
+    "close": "Fechar Safra",
+    "history": "Histórico de Safras",
+    "all": "Todas as Safras",
+    "open_harvests": "Safras Abertas",
+    "closed_harvests": "Safras Fechadas",
+    "all_cultures": "Todas as culturas",
+    "all_fields": "Todos os talhões",
+    "search_placeholder": "Buscar por cultura ou talhão...",
+    "showing_results": "Mostrando {{count}} de {{total}} safras",
+    "no_data": "Nenhuma safra encontrada",
+    "no_results": "Tente ajustar os filtros de busca.",
+    "empty_state": "Comece abrindo sua primeira safra em um talhão.",
+    "create_first": "Abrir primeira safra",
+    "create_collection": "Criar Coleta nesta Safra",
+    "generate_report": "Gerar Relatório da Safra",
+    "view_details": "Ver Detalhes",
+    "view_collections": "Ver Coletas",
+    "status": {
+      "open": "Aberta",
+      "closed": "Fechada"
+    },
+    "form": {
+      "client": "Cliente",
+      "client_placeholder": "Selecione o cliente",
+      "field": "Talhão",
+      "field_placeholder": "Selecione o talhão",
+      "field_required": "Selecione um cliente primeiro",
+      "culture": "Cultura",
+      "culture_placeholder": "Selecione a cultura",
+      "start_date": "Data de Início",
+      "end_date": "Data de Encerramento",
+      "notes": "Observações",
+      "save": "Abrir Safra",
+      "cancel": "Cancelar",
+      "creating": "Abrindo safra..."
+    },
+    "card": {
+      "field": "Talhão",
+      "period": "Período",
+      "started_at": "Iniciada em",
+      "closed_at": "Encerrada em",
+      "collections": "{{count}} coleta(s) registrada(s)",
+      "collections_zero": "Nenhuma coleta registrada",
+      "products": "{{count}} produto(s) utilizado(s)",
+      "products_zero": "Nenhum produto registrado",
+      "production_area": "Área de Produção",
+      "planting_date": "Data de Plantio"
+    },
+    "stats": {
+      "total": "Total",
+      "open": "Abertas",
+      "closed": "Fechadas"
+    },
+    "sort": {
+      "recent": "Mais recentes",
+      "oldest": "Mais antigas",
+      "culture": "Por cultura",
+      "field": "Por talhão"
+    },
+    "success": {
+      "created": "Safra aberta com sucesso!",
+      "closed": "Safra fechada com sucesso!"
+    },
+    "error": {
+      "create": "Erro ao abrir safra",
+      "close": "Erro ao fechar safra",
+      "load": "Erro ao carregar safras"
+    }
+  },
+  "maps": {
+    "title": "Mapa de Talhões",
+    "subtitle": "Visualize e gerencie seus talhões no mapa",
+    "loading": "Carregando mapa...",
+    "loading_fields": "Carregando talhões...",
+    "loading_new_area": "Carregando nova área...",
+    "search_placeholder": "Buscar cidade, coordenadas ou talhão...",
+    "no_results": "Nenhum resultado encontrado",
+    "filters": {
+      "all": "Todos os Talhões",
+      "georeferenced": "Georeferenciados",
+      "custom": "Customizados"
+    },
+    "actions": {
+      "zoom_in": "Aproximar",
+      "zoom_out": "Afastar",
+      "center": "Minha Localização",
+      "download": "Baixar Talhões",
+      "fullscreen": "Tela Cheia",
+      "style_satellite": "Satélite",
+      "style_streets": "Ruas",
+      "style_terrain": "Terreno"
+    },
+    "field_info": {
+      "title": "Informações do Talhão",
+      "name": "Nome",
+      "client": "Cliente",
+      "property": "Propriedade",
+      "zone": "Zona",
+      "area": "Área",
+      "perimeter": "Perímetro",
+      "culture": "Cultura Atual",
+      "create_field": "Registrar Talhão",
+      "edit_field": "Editar Talhão",
+      "view_details": "Ver Detalhes",
+      "create_collection": "Criar Coleta",
+      "unregistered": "Talhão não registrado"
+    },
+    "stats": {
+      "total": "Total de Talhões",
+      "georeferenced": "Georeferenciados",
+      "custom": "Customizados",
+      "visible": "Visíveis no Mapa"
+    },
+    "tooltips": {
+      "search": "Busque por cidade, coordenadas (lat, lng) ou nome do talhão",
+      "filter": "Filtrar talhões por tipo",
+      "style": "Alterar estilo do mapa"
+    },
+    "location": {
+      "requesting": "Obtendo sua localização...",
+      "requesting_description": "Permita o acesso à localização para centralizar o mapa na sua posição atual.",
+      "granted": "Localização obtida com sucesso!",
+      "denied": "Permissão de localização negada",
+      "denied_description": "Para usar esta funcionalidade, permita o acesso à localização nas configurações do navegador.",
+      "error": "Erro ao obter localização"
+    }
+  },
+  "settings": {
+    "title": "Configurações",
+    "language": {
+      "title": "Idioma",
+      "description": "Selecione o idioma do aplicativo"
+    },
+    "theme": {
+      "title": "Tema",
+      "description": "Escolha entre modo claro e escuro",
+      "light": "Claro",
+      "dark": "Escuro",
+      "system": "Sistema"
+    },
+    "account": {
+      "title": "Conta",
+      "email": "E-mail",
+      "name": "Nome",
+      "organization": "Organização"
+    },
+    "about": {
+      "title": "Sobre",
+      "version": "Versão",
+      "support": "Suporte"
+    }
+  },
+  "general": {
+    "client": "Cliente",
+    "property": "Propriedade",
+    "plot": "Talhão",
+    "zone": "Zona TIMAC",
+    "culture": "Cultura",
+    "phase": "Fase",
+    "objective": "Objetivo da Visita",
+    "consultant": "Consultor Responsável"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "view": "Visualizar",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "refresh": "Atualizar",
+    "retry": "Tentar novamente",
+    "no_data": "Nenhum dado encontrado",
+    "required": "Obrigatório",
+    "optional": "Opcional",
+    "yes": "Sim",
+    "no": "Não",
+    "coming_soon": "Em Desenvolvimento"
+  },
+  "errors": {
+    "generic": "Ocorreu um erro inesperado",
+    "network": "Erro de conexão. Verifique sua internet.",
+    "unauthorized": "Sessão expirada. Faça login novamente.",
+    "forbidden": "Você não tem permissão para esta ação.",
+    "not_found": "Recurso não encontrado.",
+    "validation": "Por favor, verifique os campos do formulário."
+  },
+  "toasts": {
+    "sync_success": "Dados sincronizados com sucesso!",
+    "sync_error": "Erro ao sincronizar dados",
+    "save_success": "Salvo com sucesso!",
+    "save_error": "Erro ao salvar",
+    "delete_success": "Excluído com sucesso!",
+    "delete_error": "Erro ao excluir"
+  }
+}
