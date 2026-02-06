@@ -6,6 +6,7 @@ export interface TranslateOptions {
   model: string;
   verbose: boolean;
   dryRun: boolean;
+  missingOnly: boolean;
 }
 
 export interface FlattenedStrings {

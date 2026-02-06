@@ -5,7 +5,7 @@ import { translate } from "./src/translator";
 import type { TranslateOptions } from "./src/types";
 
 program
-  .name("i18n-ai-translator")
+  .name("i18n-batch-translator")
   .description("Translate i18n JSON files using OpenAI API")
   .version("1.0.0");
 
@@ -22,6 +22,11 @@ program
   .option("-m, --model <model>", "OpenAI model to use", "gpt-4o")
   .option("-v, --verbose", "Show detailed progress", false)
   .option("--dry-run", "Parse and validate without calling API", false)
+  .option(
+    "--missing-only",
+    "Only translate keys missing from existing target files (auto-detects existing files)",
+    false
+  )
   .action(async (opts) => {
     console.log(chalk.bold("\ni18n AI Translator\n"));
 
@@ -33,6 +38,7 @@ program
       model: opts.model,
       verbose: opts.verbose,
       dryRun: opts.dryRun,
+      missingOnly: opts.missingOnly,
     };
 
     try {

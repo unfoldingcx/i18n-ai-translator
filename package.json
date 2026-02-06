@@ -2,7 +2,7 @@
   "name": "i18n-batch-translator",
   "version": "1.0.1",
   "description": "CLI tool to translate i18n JSON files using OpenAI API with smart section-based batching",
-  "author": "Your Name",
+  "author": "UNFOLDING CX",
   "license": "MIT",
   "keywords": [
     "i18n",
@@ -17,16 +17,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/i18n-ai-translator"
+    "url": "https://github.com/unfoldingcx/i18n-ai-translator"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/i18n-ai-translator/issues"
+    "url": "https://github.com/unfoldingcx/i18n-ai-translator/issues"
   },
-  "homepage": "https://github.com/yourusername/i18n-ai-translator#readme",
+  "homepage": "https://github.com/unfoldingcx/i18n-ai-translator#readme",
   "type": "module",
   "module": "index.ts",
   "bin": {
-    "i18n-ai-translator": "./index.ts"
+    "i18n-batch-translator": "./index.ts"
   },
   "files": [
     "index.ts",
